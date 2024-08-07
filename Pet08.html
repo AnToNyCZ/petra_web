@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petulka</title>
+
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .hore {
+            margin-top: 6px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            background-color:#f4b5e5;
+            height: 80px;
+            flex-direction: row;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .petrafotka {
+            width: 100%;
+            margin-top: -50px;
+            
+        }
+
+      .text{
+          position: absolute;
+          top:35%;
+          left:68%;
+          margin-top: 40px;
+
+      }
+
+        .tlacitkoomne {
+            width: 100px;
+            height: 50px;
+        }
+
+        
+        .d, .l, .c, .s, .r, .p {
+            cursor: pointer;
+            font-family: "Quicksand", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 20px;
+            margin-left: 34px;
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        
+        .d {
+            margin-left: 500px;
+        }
+
+        
+        .d:hover, .l:hover, .c:hover, .s:hover, .r:hover, .p:hover {
+            color: #007bff; 
+        }
+
+        .d::after, .l::after, .c::after, .s::after, .r::after, .p::after {
+            content: ''; 
+            position: absolute;
+            left: 0;
+            bottom: -2px; 
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s ease; 
+        }
+
+        .d:hover::after, .l:hover::after, .c:hover::after, .s:hover::after, .r:hover::after, .p:hover::after {
+            width: 100%; 
+
+
+
+
+        }
+            .pismo{
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+}
+        .text{
+            font-size: 50px;
+            color: chartreuse;
+            background-color: rgba(0,0,0,0.3) ;
+            font-style: bold;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <div class="hore">
+        <div class="d">Domů</div>
+        <div class="l">O mne</div>
+        <div class="c">Skills</div>
+        <div class="s">Portfolio</div>
+        <div class="r">Reference</div>
+        <div class="p">Kontakt</div>
+    </div >
+    <div class="all">
+    <img class="petrafotka" src="C:\Users\AnToNy\Desktop\petra\pepek.jpg" alt="Petra Fotka">
+    <div class="text">Ing. Petra Svobodová</div>
+
+</div>
+</div>
+</body>
+</html>
+
+
