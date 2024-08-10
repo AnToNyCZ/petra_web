@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omne</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* Globální nastavení stylů pro responsivitu */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            
+            padding-bottom: 10px;
+            padding-top: 40px;
+            
+        }
+
+        .hore {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center; /* Rovnoměrné rozložení na řádku */
+            background: linear-gradient(45deg, 
+            rgba(0, 123, 255, 0.4), 
+            rgba(220, 20, 60, 0.4), 
+            rgba(138, 43, 226, 0.4), 
+            rgba(240, 118, 31, 0.4));
+
+            animation: color 12s ease-in-out infinite;
+            height: 80px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+        .petrafotka {
+            width: 100%;
+            height: auto; /* Automatické přizpůsobení výšky podle šířky */
+            display: block;
+        }
+
+
+
+        .d, .l, .c, .s, .r, .p {
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.25em;
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .l {
+                color:chartreuse;
+       
+            }
+
+        .d:hover, .l:hover, .c:hover, .s:hover, .r:hover, .p:hover {
+            color: #007bff;
+        }
+
+        .d::after, .l::after, .c::after, .s::after, .r::after, .p::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .d:hover::after, .l:hover::after, .c:hover::after, .s:hover::after, .r:hover::after, .p:hover::after {
+            width: 100%;
+        }
+
+
+
+
+        .obr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* Vzdálenost mezi sociálními ikonami */
+            
+        }
+
+
+        .fb:hover, .ig:hover, .tw:hover {
+            opacity: 0.6;
+        }
+
+
+        .omnepozadi{
+            background-color: rgb(255, 255, 255);
+        position: relative;
+           height: 1200px;
+            align-items: center;
+            z-index: 1;
+            padding-top: 100px;
+            }
+            
+        
+
+
+
+        /* Responsivní úpravy pro mobilní zařízení */
+        @media (max-width: 768px) {
+            .hore {
+                flex-direction: column; /* Přepnout na sloupcové uspořádání pro mobily */
+                height: auto; /* Automatická výška pro obsah */
+                padding: 10px 0;
+            }
+
+            .d, .l, .c, .s, .r, .p {
+                font-size: 18px; /* Menší písmo na mobilu */
+                margin: 5px 0;
+
+            }
+            
+    
+
+        }
+
+        .logo{
+            height:80px;
+            width: 80px;
+            margin-right:60px ;
+        }
+
+        .copy{
+            position: absolute;
+            left:1%;
+            bottom:40% ;
+            font-size: 12px;
+        }
+
+        .petraall{
+            width: 30%;
+            position: absolute;
+            right:10%;
+            z-index: 0;
+            
+            
+        }
+
+        .textpetra{
+            font-size: 18px;
+            position: absolute;
+            
+            height: 10px;
+            color: rgb(77, 77, 77);
+            left: 20%;
+            top:8%;
+            width: 470px;
+            text-align: justify;
+        }
+
+        .hore a{
+            text-decoration: none;
+        }
+
+
+        .spodek {
+            background-color: rgb(188, 195, 195);
+            position: relative;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .obr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px; /* Vzdálenost mezi sociálními ikonami */
+        }
+
+
+        .logo{
+            height:80px;
+            width: 80px;
+            margin-right:60px ;
+        }
+
+            .logo2{
+            height:50px;
+            width: 50px;
+            position: absolute;
+            left:1%;
+            bottom:52% ;
+
+
+        }
+        .copy{
+            position: absolute;
+            left:1%;
+            bottom:40% ;
+            font-size: 12px;
+        }
+
+        .fb, .ig, .tw {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            vertical-align:top ;
+        }
+
+        .fb{
+            width: 32px;
+            height: 32px;
+        }
+
+        .tw{
+            width: 28px;
+            height: 28px;
+        }
+
+        .fb:hover, .ig:hover, .tw:hover {
+            opacity: 0.6;
+        }
+
+        .clanekkral{
+            display: flex;
+            flex-direction: row;
+
+        
+            position:absolute;
+            top:60%;
+            left:17%
+            
+           
+      
+          }
+
+          .umistenifotka{
+
+              width: 50%;
+            
+              
+          }
+
+    .fotkaclanek{
+       width: 90%;
+    }
+
+    .clanektext{
+        color: rgb(26, 19, 74);
+        font-size: 30px;
+        font-family: "Exo 2", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+      line-height: 40px;
+        margin-left: 50px;
+        position: relative;
+        margin-top: 20px;
+        
+
+    }
+    
+       .datum{
+           color: grey;
+           font-size: 12px;
+           position: absolute;
+           right:29%;
+           bottom:40%;
+           position: absolute;
+       }
+        
+       
+       .odkazbutton{
+           border-style: solid;
+           background-color: white;
+           color: black;
+          font-size: 15px;
+          height: 55px;
+          width: 150px;
+          border-radius: 7px;
+          cursor:pointer;
+          position: absolute;
+          bottom:18%;
+          right:30%;
+          border-color: lightgray;
+          
+       }
+
+       .odkazbutton:hover{
+           opacity:0.5;
+       }
+
+       .odkazbutton a{
+        text-decoration: none;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="hore">
+    <img class="logo" src="Petra/PETRALOGO.png" alt="">
+        <div class="d"><a class="domlink" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/petkagpt.html">Domů</a></div>
+        <div class="l"><a class="omne" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/omnee.html">O mne</a></div>
+        <div class="c">Skills</div>
+        <div class="s"><a class="omne" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/portfolio.html">Portfolio</a></div>
+        <div class="r">Reference</div>
+        <div class="p"><a class="omne" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/kontakt.html">Kontakt</a></div>
+        
+    </div>
+    <div class="omnepozadi">
+        <img class="petraall" src="Petra/Petor.jpg">
+
+
+    <div class="textpetra"> <span class="vlastnostitext">Už na gymnáziu jsem objevila svou vášeň pro matematiku a informační technologie, což mě vedlo k dalšímu studiu na VŠB - Technické univerzitě Ostrava,
+         kde jsem se zaměřila na fakultě informatiky zaměřila na obor Informatika a výpočetní technika.
+         <br> Během inženýrského studia jsem se specializovala na analýzu obrazu a počítačovou grafiku, což mě přivedlo k mé současné práci na IT4Innovations. Zde působím jako Researcher, kde se zaměřuji na oblast <strong> Computer Vision</strong>, přičemž využívám AI, pokročilé algoritmy deep learningu a konvoluční neuronové sítě. 
+         Kromě toho pracuji na volné noze jako Data Scientist, kde aplikuji své znalosti z oblasti <b>Machine Learning</b> k analýze a predikci dat z velkých datových souborů.</span>  </div>
+    
+            <div class="clanekkral"> 
+        
+                <div class="umistenifotka"><img class="fotkaclanek" src="Petra/clanekpetra.jpg" alt=""></div>
+                
+                <div class="clanektext">Women in Tech: Interview <br> with Petra Svobodová, <br>
+                    research assistant<br> at IT4Innovations</div>
+                    <span class="datum">News from Saturday 10 .August 2024</span>
+                    <button class="odkazbutton"> <a href="https://eumaster4hpc.eu/news/women-in-tech-interview-with-petra-svobodova-research-assistant-at-it4innovations/" target="_blank" > Odkaz na článek </a></button>
+            </div>
+
+
+         </div>    
+    <div class="spodek">
+        <div class="obr">
+            <img class="logo2" src="Petra/PETRALOGO.png" alt="">
+            <span class="copy"> <strong>Copyright ©</strong>  2024 Petra Svobodová <strong>Elara</strong>  Company. All rights reserved.</span>
+            <a href="https://www.facebook.com/petra.svobodova.568" target="_blank">
+                <img class="fb" src="Petra/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/petka8s/" target="_blank">
+                <img class="ig" src="Petra/ins.png" alt="Instagram">
+            </a>
+            <img class="tw" src="Petra/twit.png" alt="Twitter">
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
