@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petulka</title>
@@ -30,7 +34,7 @@
             line-height: 1.6;
             color: #333;
          
-            padding-bottom: 1400px;
+            padding-bottom: 800px;
 
             
 
@@ -162,17 +166,21 @@
 
         .spodek {
             background-color: rgb(188, 195, 195);
-            position: relative;
+            position: absolute;
             height: 120px;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px;
+            bottom:-45%;
+          
+            left:0;
+            right: 0;
+            
+
+
         }
 
-        .onlyfotka {
-            position: relative;
-        }
 
         .obr {
             display: flex;
@@ -260,11 +268,13 @@
     width: 400px;
     position: absolute;
     top:30%;
+   
 }
 
 .contact-form h2 {
     text-align: center;
     margin-bottom: 20px;
+ 
 }
 
 .contact-form label {
@@ -304,26 +314,50 @@
     font-weight: bold;
 }
 
+.onlyfotka {
+            position: absolute;
+  
+            top:30%;
+            right: 13%;
+        }
 
+.peobr{
+    width: 80%;
+   
+}
+.hihi{
+    position: absolute;
+    font-size: 20px;
+    color: cornsilk;
+    width: 160px;
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  margin-left: -10px;
+}
 
     </style>
 </head>
 
 <body>
- 
-  <div class="hore">
+    <div class="hore">
         <img class="logo" src="Petra/PETRALOGO.png" alt="">
-        <div class="d"><a href="https://antonycz.github.io/petra_web/index.html">Domů</a> </div>
-        <div class="l"><a href="https://antonycz.github.io/petra_web/omnee.html"> O mne </a> </div>
+        <div class="d"><a href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/petkagpt.html">Domů</a> </div>
+        <div class="l"><a href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/omnee.html"> O mne </a> </div>
         <div class="c">Skills</div>
-        <div class="s"><a href="https://antonycz.github.io/petra_web/portfolio.html">Portfolio</a></div>
+        <div class="s"><a class="omne" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/portfolio.html">Portfolio</a></div>
         <div class="r">Reference</div>
-        <div class="p"><a  href="https://antonycz.github.io/petra_web/kontakt.html">Kontakt</a></div>
+        <div class="p"><a class="domlink" href="file:///C:/Users/AnToNy/Desktop/HTML/css/youtube/omnee.html">Kontakt</a></div>
+        
     </div>
     
     <div class="onlyfotka">
         
-       
+       <img class="peobr" src="Petra/hehe.png" alt="">
+     <span class="hihi"> I malé káčátko se může stát velkým hrdinou</span>
+
+
 
     </div>
 
@@ -342,6 +376,9 @@
             <button type="submit">Odeslat</button>
         </form>
         <p id="status"></p>
+
+
+
     </div>
 
 
@@ -357,7 +394,19 @@
                 });
         });
     </script>
-
+<div class="spodek">
+    <div class="obr">
+        <img class="logo2" src="Petra/PETRALOGO.png" alt="">
+        <span class="copy"> <strong>Copyright ©</strong>  2024 Petra Svobodová <strong>Elara</strong>  Company. All rights reserved.</span>
+        <a href="https://www.facebook.com/petra.svobodova.568" target="_blank">
+            <img class="fb" src="Petra/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/petka8s/" target="_blank">
+            <img class="ig" src="Petra/ins.png" alt="Instagram">
+        </a>
+        <img class="tw" src="Petra/twit.png" alt="Twitter">
+    </div>
+</div>
 
 </body>
 </html>
