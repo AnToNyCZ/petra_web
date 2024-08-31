@@ -11,26 +11,162 @@
             margin: 0;
             padding: 0;
             padding-top: 50px;
+            padding-bottom: 200px;
+            position: relative;
+            
+            background: linear-gradient(45deg,#4cae4c,#9eb85c,#c57e4b,#d65616);
+            background-size: 300% 300%;
+            animation: color 12s ease-in-out infinite;
+            
+           
+            z-index: 20;
         }
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+
+
+            
+        
         /* Definování kontejneru, který je centrovaný a responzivní */
         .container {
             width: 80%;
             height: 100vh;
-            background-color: lightblue;
+            /* background-color: lightblue; */
             margin: auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         /* Styl pro text uvnitř kontejneru */
+
+
+        .contejner1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center; /* Rovnoměrné rozložení na řádku */
+            
+            background: linear-gradient(45deg, 
+            rgba(0, 123, 255, 0.4), 
+            rgba(220, 20, 60, 0.4), 
+            rgba(138, 43, 226, 0.4), 
+            rgba(240, 118, 31, 0.4));
+
+            animation: color 12s ease-in-out infinite;
+            height: 95px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .contejner1 {
+                flex-direction: column; /* Přepnout na sloupcové uspořádání pro mobily */
+                height: auto; /* Automatická výška pro obsah */
+                padding: 10px 0;
+            }
+
+            .d, .l, .c, .s, .r, .p {
+                font-size: 18px; /* Menší písmo na mobilu */
+                margin: 5px 0;
+            }
+
+            .text {
+                font-size: 8vw; /* Větší písmo pro mobily */
+                padding: 20px;
+            }
+        }
+
+            .logo{
+            height:80px;
+            width: 80px;
+            margin-right:60px ;
+        }
+
+            .logo2{
+            height:50px;
+            width: 50px;
+            position: absolute;
+            left:1%;
+            bottom:52% ;
+
+
+        }
+ 
+
+
+
+
+
+        .d, .l, .c, .s, .r, .p {
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.25em;
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .d:hover, .l:hover, .c:hover, .s:hover, .r:hover, .p:hover {
+            color: #007bff;
+        }
+
+        .d::after, .l::after, .c::after, .s::after, .r::after, .p::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .d:hover::after, .l:hover::after, .c:hover::after, .s:hover::after, .r:hover::after, .p:hover::after {
+            width: 100%;
+        }
+
+
+
+
+
         .text {
             font-size: 2rem;
             text-align: center;
         }
         .onlyfotka{
             margin: 0;
-            
+            margin-top: 23px;
             padding: 0;
+     
         }
         .peobr{
             width: 70%;
@@ -43,6 +179,9 @@
     align-items: center;
     justify-content: center;
     gap: 20px; /* Mezera mezi formulářem a obrázkem */
+     margin-left: 220px; 
+  
+   
 }
 
 .contact-form {
@@ -108,11 +247,120 @@
    justify-content: center;
    padding-top: 40px;
 }
+
+
+.logo2{
+            height:50px;
+            width: 50px;
+            position: absolute;
+            left:2%;
+            bottom:30% ;
+
+
+        }
+        .copy{
+            position: absolute;
+            left:1%;
+            bottom:20% ;
+            font-size: 12px;
+        }
+
+        .contejner3 {
+            background-color: rgb(229, 231, 237);
+            position: absolute;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+       
+            bottom: 0;
+             width: 80%;
+             margin-left: 10%;
+           
+          
+
+            
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+           
+            
+            
+            
+          
+          
+            
+
+
+        }
+
+
+        .obr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            
+        }
+
+        .fb, .ig, .tw {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            vertical-align:top ;
+        }
+
+        .fb{
+            width: 32px;
+            height: 32px;
+        }
+
+        .tw{
+            width: 28px;
+            height: 28px;
+        }
+
+        .fb:hover, .ig:hover, .tw:hover {
+            opacity: 0.6;
+        }
+
+        .hihi {
+    font-size: 20px;
+    color: cornsilk;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: -400px;
+    margin-left: -80px;
+  
+    
+    
+  
+
+    width: 200px;
+
+
+}
+
     </style>
 </head>
 <body>
     <div class="container">
   
+
+        <div class="contejner1">
+            <img class="logo" src="Petra/PETRALOGO.png" alt="">
+            <div class="d"><a href="https://antonycz.github.io/petra_web/index.html">Domů</a> </div>
+            <div class="l"><a href="https://antonycz.github.io/petra_web/omnee.html"> O mne </a> </div>
+            <div class="c">Skills</div>
+            <div class="s"><a href="https://antonycz.github.io/petra_web/portfolio.html">Portfolio</a></div>
+            <div class="r">Reference</div>
+            <div class="p"><a  href="https://antonycz.github.io/petra_web/kontakt.html">Kontakt</a></div>
+        </div>
+
+
 
     <div class="contejner2">
         <div class="form-and-image-container">
@@ -138,8 +386,26 @@
 
         <div class="onlyfotka">
             <img class="peobr" src="Petra/hehe.png" alt="">
+           
     </div>
+    <div class="hihi">I malé káčátko se může stát velkým hrdinou</div>
 </div>
+</div>
+<div class="contejner3">
+    <div class="obr">
+        <img class="logo2" src="Petra/PETRALOGO.png" alt="">
+        <span class="copy"> <strong>Copyright ©</strong>  2024 Petra Svobodová <strong>Elara</strong>  Company. All rights reserved.</span>
+        <a href="https://www.facebook.com/petra.svobodova.568" target="_blank">
+            <img class="fb" src="Petra/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/petka8s/" target="_blank">
+            <img class="ig" src="Petra/ins.png" alt="Instagram">
+        </a>
+        <img class="tw" src="Petra/twit.png" alt="Twitter">
+    </div>
+
+
+
 </div>
 </body>
 </html>
