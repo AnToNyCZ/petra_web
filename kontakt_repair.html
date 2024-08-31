@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Playwrite+HR:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("C3ZmM9_wwDYr5KeGN"); // Zde nahraďte YOUR_USER_ID vaším User ID z EmailJS
+        })();
+    </script>
+
+
+    <style>
+        /* Globální nastavení stylů pro responsivitu */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Quicksand", sans-serif;
+            line-height: 1.6;
+            color: #333;
+         
+            /* padding-bottom: 800px; */
+
+            
+
+        
+            background: linear-gradient(45deg, #40b9cc, #bdda87, #906faf, #47c961);
+            animation: color 12s ease-in-out infinite;
+          min-height: 150vh;
+            align-items: center;
+            z-index: 1;
+            padding-top: 80px;
+            width: 100%;
+            
+            
+    
+    
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; */
+}
+            
+        
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }}
+
+            /* .kral{
+        background-color: rgba(0, 0, 0, 0.1);
+    } */
+
+
+        
+
+        
+        .contejner1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center; /* Rovnoměrné rozložení na řádku */
+            
+            background: linear-gradient(45deg, 
+            rgba(0, 123, 255, 0.4), 
+            rgba(220, 20, 60, 0.4), 
+            rgba(138, 43, 226, 0.4), 
+            rgba(240, 118, 31, 0.4));
+
+            animation: color 12s ease-in-out infinite;
+            height: 95px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        @keyframes color {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+
+
+
+
+
+
+        .d, .l, .c, .s, .r, .p {
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 1.25em;
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+            margin-left: 20px;
+        }
+
+        .d:hover, .l:hover, .c:hover, .s:hover, .r:hover, .p:hover {
+            color: #007bff;
+        }
+
+        .d::after, .l::after, .c::after, .s::after, .r::after, .p::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background-color: #333;
+            transition: width 0.3s ease;
+        }
+
+        .d:hover::after, .l:hover::after, .c:hover::after, .s:hover::after, .r:hover::after, .p:hover::after {
+            width: 100%;
+        }
+
+
+        .contejner2{
+        display:flex;
+        flex-direction: row;
+        margin:0;
+        padding:0;
+        position: relative;
+        
+        width: 100%;
+        min-height: 300px;
+        z-index: 3;
+        padding-top: 80px;
+        justify-items: center;
+        margin-top: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        
+
+        }
+
+
+
+        .onlyfotka {
+            position: absolute;
+            right:18%;
+            top:0;
+
+            
+
+        }
+
+
+        .hihi{
+    position: absolute;
+    font-size: 20px;
+    color: cornsilk;
+    width: 160px;
+    font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  top: 0;
+  right: -30%;
+  padding-top: 50px;
+
+
+}
+
+
+
+.peobr{
+    width: 80%;
+    display: flex;
+    
+   
+}
+
+
+
+
+
+        .contejner3 {
+            background-color: rgb(188, 195, 195);
+            position: absolute;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            bottom:-50%;
+          
+            left:0;
+            right: 0;
+            
+
+
+        }
+
+
+        .obr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            
+        }
+
+        .fb, .ig, .tw {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            vertical-align:top ;
+        }
+
+        .fb{
+            width: 32px;
+            height: 32px;
+        }
+
+        .tw{
+            width: 28px;
+            height: 28px;
+        }
+
+        .fb:hover, .ig:hover, .tw:hover {
+            opacity: 0.6;
+        }
+
+        /* Responsivní úpravy pro mobilní zařízení */
+        @media (max-width: 768px) {
+            .contejner1 {
+                flex-direction: column; /* Přepnout na sloupcové uspořádání pro mobily */
+                height: auto; /* Automatická výška pro obsah */
+                padding: 10px 0;
+            }
+
+            .d, .l, .c, .s, .r, .p {
+                font-size: 18px; /* Menší písmo na mobilu */
+                margin: 5px 0;
+            }
+
+            .text {
+                font-size: 8vw; /* Větší písmo pro mobily */
+                padding: 20px;
+            }
+        }
+
+            .logo{
+            height:80px;
+            width: 80px;
+            margin-right:60px ;
+        }
+
+            .logo2{
+            height:50px;
+            width: 50px;
+            position: absolute;
+            left:1%;
+            bottom:52% ;
+
+
+        }
+        .copy{
+            position: absolute;
+            left:1%;
+            bottom:40% ;
+            font-size: 12px;
+        }
+
+        .contejner1 a{
+            text-decoration: none;
+        }
+     
+
+        .contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    position: absolute;
+    right:40%;
+    
+
+    
+   
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+ 
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #4cae4c;
+}
+
+#status {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+   <!-- <div class="kral"  > -->
+    <div class="contejner1">
+        <img class="logo" src="Petra/PETRALOGO.png" alt="">
+        <div class="d"><a href="https://antonycz.github.io/petra_web/index.html">Domů</a> </div>
+        <div class="l"><a href="https://antonycz.github.io/petra_web/omnee.html"> O mne </a> </div>
+        <div class="c">Skills</div>
+        <div class="s"><a href="https://antonycz.github.io/petra_web/portfolio.html">Portfolio</a></div>
+        <div class="r">Reference</div>
+        <div class="p"><a  href="https://antonycz.github.io/petra_web/kontakt.html">Kontakt</a></div>
+    </div>
+    
+
+    <div class="contejner2"> 
+    <div class="contact-form">
+        <h2>Kontaktujte mne</h2>
+        <form id="contact-form">
+            <label for="name">Jméno:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Zpráva:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Odeslat</button>
+        </form>
+        <p id="status"></p>
+
+
+
+   
+
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('service_l5lbpn7', 'template_nftm65d', this)
+                .then(function() {
+                    document.getElementById('status').innerText = "Zpráva byla úspěšně odeslána!";
+                }, function(error) {
+                    document.getElementById('status').innerText = "Něco se pokazilo. Zkuste to prosím znovu.";
+                });
+        });
+    </script>
+
+
+     </div>
+
+     <div class="onlyfotka">
+
+        <img class="peobr" src="Petra/hehe.png" alt="">
+    
+        <div class="hihi"> I malé káčátko se může stát velkým hrdinou</div>
+
+    </div>
+ 
+        
+ 
+</div>
+
+
+<div class="contejner3">
+    <div class="obr">
+        <img class="logo2" src="Petra/PETRALOGO.png" alt="">
+        <span class="copy"> <strong>Copyright ©</strong>  2024 Petra Svobodová <strong>Elara</strong>  Company. All rights reserved.</span>
+        <a href="https://www.facebook.com/petra.svobodova.568" target="_blank">
+            <img class="fb" src="Petra/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/petka8s/" target="_blank">
+            <img class="ig" src="Petra/ins.png" alt="Instagram">
+        </a>
+        <img class="tw" src="Petra/twit.png" alt="Twitter">
+    </div>
+</div>
+
+<!-- </div> -->
+</body>
+</html>
